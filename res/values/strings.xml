@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="play">Play!</string>
+    <string name="sager_king_legend">Sager King legend</string>
+    <string name="battlefield">BattleField</string>
+    <string name="blood">blood:</string>
+    <string name="monster">monster</string>
+    <string name="company">company</string>
+    <string name="shop">shop</string>
+    <string name="setting">setting</string>
 </resources>
