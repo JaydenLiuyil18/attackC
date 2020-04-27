@@ -101,8 +101,22 @@ public class fairy {
         return interval;
     }
 
+    public String getOwnOrnotStatus() {
+        return ownOrnotStatus;
+    }
+
     public void setOwnOrnotStatus(String a) {
         ownOrnotStatus = a;
     }
+
+    public void setLevel(int a) {
+        level = a;
+    }
+
+    public void setAttack(int a) {
+        attack = a;
+    }
+
+
 
 }

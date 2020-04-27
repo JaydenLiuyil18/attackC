@@ -39,9 +39,9 @@ public class AttackCalculator {
             System.out.println(sdf.format(new Date()) + "--循环执行第" + count + "次");
 
             // 假设我们有五个英雄
-            healthOfMonster = healthOfMonster - first.attack / first.interval
-                    - second.attack / second.interval - third.attack / third.interval
-                    - fourth.attack / fourth.interval - fifth.attack / third.interval;
+            healthOfMonster = (int) healthOfMonster - first.getHarm() / first.getInterval()
+                    - second.getHarn() / second.getInterval() - third.getHarm() / third.getInterval()
+                    - fourth.getHarm() / fourth.getInterval() - fifth.getHarm() / third.getInterval();
             if (count == 600) {
                 result = true;
                 break;
