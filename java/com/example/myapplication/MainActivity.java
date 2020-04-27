@@ -13,6 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 public class MainActivity extends AppCompatActivity {
     /**
+     * constant.
+     */
+    public static final int REQUEST_CODE = 100;
+    /**
      * do.
      */
     private Button button;
@@ -33,9 +37,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        Intent classs = new Intent(this, activity2.class);
 
         //ImageView myImageView = (ImageView) findViewById(R.id.my_image_view);
         //myImageView.setImageResource(R.drawable.background);
+
     }
 
     /**
@@ -84,4 +90,8 @@ public class MainActivity extends AppCompatActivity {
 //
 //        return resizedBitmap;
 //    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
 }
