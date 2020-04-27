@@ -1,0 +1,89 @@
+public class PurchaseSystem {
+    public int balance;
+    public int price1;
+    public int price2;
+    public int price3;
+    public int price4;
+    public int price5;
+    fairy first = new fairy(1);
+    fairy second = new fairy(2);
+    fairy third = new fairy(3);
+    fairy fourth = new fairy(4);
+    fairy fifth = new fairy(5);
+    balance = 200;
+    price1 = 5000;
+    price2 = 500000;
+    price3 = 50000000;
+    price4 = 5000000000;
+    price5 = 500000000000;
+    setContentView(R.layout.purchase_system);
+    button1 = findViewById(R.id.purchase1);
+    button1.setOnClickListener(new View.OnClickListener() {
+        if (balance >= price1) {
+            balance = balance - price1;
+            first.setAttack(first.getHarm() * 1.2);
+            price1 = price1 * 1.5;
+            first.setLevel(first.getLevel() + 1);
+        }
+    });
+
+    button2 = findViewById(R.id.purchase2);
+    button2.setOnClickListener(new View.OnClickListener() {
+        if (balance >= price2) {
+            if (second.getOwnOrnotStatus().equals("OWN")) {
+                balance = balance - price2;
+                second.setAttack(second.getHarm() * 1.2);
+                price2 = price2 * 1.5;
+                second.setLevel(second.getLevel() + 1);
+            } else {
+                second.setOwnOrnotStatus("OWN");
+            }
+
+        }
+    });
+
+    button3 = findViewById(R.id.purchase3);
+    button3.setOnClickListener(new View.OnClickListener() {
+        if (balance >= price3) {
+            if (third.getOwnOrnotStatus().equals("OWN")) {
+                balance = balance - price3;
+                third.setAttack(third.getHarm() * 1.2);
+                price3 = price3 * 1.5;
+                third.setLevel(third.getLevel() + 1);
+            } else {
+                third.setOwnOrnotStatus("OWN");
+            }
+
+        }
+    });
+
+    button4 = findViewById(R.id.purchase4);
+    button4.setOnClickListener(new View.OnClickListener() {
+        if (balance >= price4) {
+            if (fourth.getOwnOrnotStatus().equals("OWN")) {
+                balance = balance - price4;
+                fourth.setAttack(fourth.getHarm() * 1.2);
+                price4 = price4 * 1.5;
+                fourth.setLevel(fourth.getLevel() + 1);
+            } else {
+                fourth.setOwnOrnotStatus("OWN");
+            }
+
+        }
+    });
+
+    button5 = findViewById(R.id.purchase5);
+    button5.setOnClickListener(new View.OnClickListener() {
+        if (balance >= price5) {
+            if (fifth.getOwnOrnotStatus().equals("OWN")) {
+                balance = balance - price5;
+                fifth.setAttack(fifth.getHarm() * 1.2);
+                price5 = price5 * 1.5;
+                fifth.setLevel(fifth.getLevel() + 1);
+            } else {
+                fifth.setOwnOrnotStatus("OWN");
+            }
+
+        }
+    });
+}
