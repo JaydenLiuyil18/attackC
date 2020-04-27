@@ -4,6 +4,7 @@ public class fairy {
     /**
      * name
      */
+    private String ownOrnotStatus;
     private String name;
     /**
      * level
@@ -22,17 +23,49 @@ public class fairy {
      * @param a
      *
      */
-    private fairy f;
+    //private fairy f;
     //其实我觉得如果我要计算英雄的伤害那每秒伤害肯定是a/i
     //然后我在另一个class里call的话 fairy first = new fairy（first）
     // 我觉得不一定要在construction里给定属性，属性应该是固定好的
     // 先不设定升级，你看一下能不能按照我在attackcalculator的方式比如先固定5个英雄
-    public fairy(fairy a) {
-//        name = n;
-//        level = l;
-//        attack = a;
-//        interval = i;
-        f = a;
+    public fairy(int a) {
+        // 第一个怪兽初始等级为
+        if (a == 1) {
+            name = "first";
+            level = 1;
+            attack = 50;
+            interval = 0.5;
+            ownOrnotStatus = "not";
+        }
+        if (a == 2) {
+            name = "second";
+            level = 1;
+            attack = 500;
+            interval = 0.5;
+            ownOrnotStatus = "not";
+        }
+        if (a == 3) {
+            name = "third";
+            level = 1;
+            attack = 5000;
+            interval = 0.5;
+            ownOrnotStatus = "not";
+        }
+        if (a == 4) {
+            name = "fourth";
+            level = 1;
+            attack = 50000;
+            interval = 0.5;
+            ownOrnotStatus = "not";
+        }
+        if (a == 5) {
+            name = "fifth";
+            level = 1;
+            attack = 500000;
+            interval = 0.5;
+            ownOrnotStatus = "not";
+        }
+
     }
     /**
      * get name.
@@ -54,7 +87,10 @@ public class fairy {
      * @return attack.
      */
     public int getHarm() {
-        return attack;
+        if (ownOrnotStatus.equals("OWN")) {
+            return attack;
+        }
+        return 0;
     }
 
     /**
@@ -63,6 +99,10 @@ public class fairy {
      */
     public double getInterval() {
         return interval;
+    }
+
+    public void setOwnOrnotStatus(String a) {
+        ownOrnotStatus = a;
     }
 
 }
