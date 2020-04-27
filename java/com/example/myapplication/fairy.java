@@ -35,7 +35,7 @@ public class fairy {
             level = 1;
             attack = 50;
             interval = 0.5;
-            ownOrnotStatus = "not";
+            ownOrnotStatus = "OWN";
         }
         if (a == 2) {
             name = "second";

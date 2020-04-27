@@ -4,6 +4,11 @@ import java.util.Date;
 
 
 public class AttackCalculator {
+    fairy first = new fairy(1);
+    fairy second = new fairy(2);
+    fairy third = new fairy(3);
+    fairy fourth = new fairy(4);
+    fairy fifth = new fairy(5);
     private int healthOfMonster;
     Attackcalculator(String monster) {
         if (monster.equals("first monster")) {
@@ -32,9 +37,12 @@ public class AttackCalculator {
             Thread.sleep(1 * 1000); //设置暂停的时间 1 秒
             count++ ;
             System.out.println(sdf.format(new Date()) + "--循环执行第" + count + "次");
+
             // 假设我们有五个英雄
-            //healthOfMonster = healthOfMonster - first.a/first.i;
-            if (count == 3) {
+            healthOfMonster = healthOfMonster - first.attack / first.interval
+                    - second.attack / second.interval - third.attack / third.interval
+                    - fourth.attack / fourth.interval - fifth.attack / third.interval;
+            if (count == 600) {
                 result = true;
                 break;
             }
