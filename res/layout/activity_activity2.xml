@@ -31,14 +31,55 @@
                 android:textSize="22sp" />
 
             <TextView
+                android:id="@+id/health_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textView"
-                android:text="@string/monster"
+                android:text="@string/monster_hp"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp" />
+            <TextView
+                android:id="@+id/twenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/health_bar"
+                android:text="@string/HP20"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/your_health_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/twenty"
+                android:text="@string/player_hp"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/ten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/your_health_bar"
+                android:text="@string/HP10"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/Coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ten"
+                android:text="@string/coin"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/Coin_ten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Coin"
+                android:text="@string/Coinzero"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
             <ImageView
-                android:layout_width="400dp"
+                android:layout_width="300dp"
                 android:layout_height="390dp"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/dragon"
@@ -70,10 +111,10 @@
                     android:padding="16dp">
 
                     <ImageView
+                        android:id="@+id/sword"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/sword" />
-
                     <Button
                         android:id="@+id/attack"
                         android:layout_width="wrap_content"

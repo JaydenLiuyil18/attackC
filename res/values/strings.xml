@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="play">Play!</string>
-    <string name="sager_king_legend">Sager King legend</string>
     <string name="battlefield">BattleField</string>
     <string name="blood">blood:</string>
     <string name="monster">monster</string>
@@ -9,5 +8,15 @@
     <string name="shop">shop</string>
     <string name="setting">setting</string>
     <string name="attack">attack</string>
-    <string name="king_legend">king_legend</string>
+    <string name="king_legend">Cultivator</string>
+    <string name="staffs">staffs</string>
+    <string name="JaydenLiu">JaydenLiu</string>
+    <string name="you_win">You win!</string>
+    <string name="restart">restart</string>
+    <string name="player_hp">PlayerHP</string>
+    <string name="HP10">10</string>
+    <string name="monster_hp">MonsterHP</string>
+    <string name="HP20">20</string>
+    <string name="coin">Coin</string>
+    <string name="Coinzero">0</string>
 </resources>
