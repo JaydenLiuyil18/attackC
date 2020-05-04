@@ -33,10 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        Intent classs = new Intent(this, activity2.class);
-        //ImageView myImageView = (ImageView) findViewById(R.id.my_image_view);
-        //myImageView.setImageResource(R.drawable.background);
-
     }
 
     /**

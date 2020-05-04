@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/staffs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/staffs"
@@ -17,12 +17,29 @@
         android:textSize="40sp" />
 
     <TextView
-        android:id="@+id/staffs"
+        android:id="@+id/names"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/JaydenLiu"
         android:textColor="#FFFFFF"
-        android:textSize="40sp" />
+        android:layout_below="@+id/staffs"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/names2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kewis_song"
+        android:layout_below = "@+id/names"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/Goback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/goback" />
 
 
 </RelativeLayout>

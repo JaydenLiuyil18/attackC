@@ -12,13 +12,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class activity2 extends AppCompatActivity implements View.OnClickListener {
     /**
+     * playerHp
+     */
+    private int PlayerHp;
+    /**
      * health_bar
      */
     private TextView Result;
     /**
      * sum
      */
-    private int sum;
+    private int monster;
     /**
      * health_bar
      */
@@ -27,7 +31,14 @@ public class activity2 extends AppCompatActivity implements View.OnClickListener
      * sum
      */
     private int coin;
-
+    /**
+     * result2
+     */
+    private TextView Result2;
+    /**
+     * result2
+     */
+    private int count = 1;
     /**
      * lalala
      * @param savedInstanceState lalala.
@@ -42,37 +53,61 @@ public class activity2 extends AppCompatActivity implements View.OnClickListener
         Button shop = findViewById(R.id.shop);
         Button setting = findViewById(R.id.setting);
         Result = findViewById(R.id.twenty);
+        Result2 = findViewById(R.id.ten);
         Coins = findViewById(R.id.Coin_ten);
         attack.setOnClickListener(this);
         company.setOnClickListener(this);
         shop.setOnClickListener(this);
         setting.setOnClickListener(this);
-
-
+        PlayerHp = Integer.parseInt(Result2.getText().toString());
+        monster = Integer.parseInt(Result.getText().toString());
+        coin = Integer.parseInt(Coins.getText().toString());
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.attack:
-                sum = Integer.parseInt(Result.getText().toString());
-                coin = Integer.parseInt(Coins.getText().toString());
-                if (sum > 0) {
-                    sum -= 1;
+                if (monster > 0) {
+                    monster -= 1;
+                    PlayerHp -= 1;
                     coin += 1;
                 }
-                if (sum == 0) {
+                if (monster == 0) {
                     openAcitivity4();
                 }
-                Result.setText(Integer.toString(sum));
+                if (PlayerHp == 0) {
+                    openEnd();
+                    break;
+                }
+                Result2.setText(Integer.toString(PlayerHp));
+                Result.setText(Integer.toString(monster));
                 Coins.setText(Integer.toString(coin));
                 Toast.makeText(this, "Attack!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.company:
-                Toast.makeText(this, "Hire soldiers", Toast.LENGTH_SHORT).show();
+                if (coin >= 10 * count && monster != 1) {
+                    PlayerHp = PlayerHp * 2;
+                    coin = coin - 10 * count;
+                    count++;
+
+                    Result2.setText(Integer.toString(PlayerHp));
+                    Coins.setText(Integer.toString(coin));
+                }
+                Result2.setText(Integer.toString(PlayerHp));
+                Toast.makeText(this, "Increase Buff", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.shop:
-                Toast.makeText(this, "Buy elixir", Toast.LENGTH_SHORT).show();
+                if (coin >= 10 * count && monster != 1) {
+                    monster = (monster / 2);
+                    coin = coin - 10 * count;
+                    count++;
+
+                    Result.setText(Integer.toString(monster));
+                    Coins.setText(Integer.toString(coin));
+                }
+                Result.setText(Integer.toString(monster));
+                Toast.makeText(this, "Enemy threatened", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.setting:
                 openAcitivity3();
@@ -82,12 +117,17 @@ public class activity2 extends AppCompatActivity implements View.OnClickListener
         }
 
     }
+
     public void openAcitivity3() {
         Intent intent = new Intent(this, activity3.class);
         startActivity(intent);
     }
     public void openAcitivity4() {
         Intent intent = new Intent(this, activity4.class);
+        startActivity(intent);
+    }
+    public void openEnd() {
+        Intent intent = new Intent(this, End.class);
         startActivity(intent);
     }
 

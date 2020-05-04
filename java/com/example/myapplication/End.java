@@ -7,14 +7,14 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class activity3 extends AppCompatActivity {
+public class End extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activity3);
-        Button Return = findViewById(R.id.Goback);
-        Return.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_end);
+        Button restart = findViewById(R.id.restart);
+        restart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openMainActivity();
@@ -25,6 +25,5 @@ public class activity3 extends AppCompatActivity {
     public void openMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-
     }
 }

@@ -4,19 +4,22 @@
     <string name="battlefield">BattleField</string>
     <string name="blood">blood:</string>
     <string name="monster">monster</string>
-    <string name="company">company</string>
-    <string name="shop">shop</string>
+    <string name="company">encourage</string>
+    <string name="shop">intimidate</string>
     <string name="setting">setting</string>
     <string name="attack">attack</string>
     <string name="king_legend">Cultivator</string>
     <string name="staffs">staffs</string>
-    <string name="JaydenLiu">JaydenLiu</string>
+    <string name="JaydenLiu">Jayden Liu</string>
     <string name="you_win">You win!</string>
     <string name="restart">restart</string>
     <string name="player_hp">PlayerHP</string>
-    <string name="HP10">10</string>
+    <string name="HP10">100</string>
     <string name="monster_hp">MonsterHP</string>
-    <string name="HP20">20</string>
+    <string name="HP20">1000</string>
     <string name="coin">Coin</string>
     <string name="Coinzero">0</string>
+    <string name="never_give_up">Never give up!</string>
+    <string name="kewis_song">Kewis Song</string>
+    <string name="goback">Return to Main</string>
 </resources>
